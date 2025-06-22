@@ -71,7 +71,6 @@ sudo systemctl restart tailscaled
 
 #### Node connection example
 
-The advertise routes and exit node are optional,
 you can accept or deny in admin page anyway.
 
 Replace the placeholder strings accordingly.
@@ -87,6 +86,9 @@ sudo tailscale up /
 --advertise-exit-node  /
 --auth-key=<PREAUTH_KEY>
 ```
+
+The advertise routes and exit node oprions are optional,
+
 
 ## Important
 
