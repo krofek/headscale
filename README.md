@@ -5,6 +5,10 @@
 > If you need some advanced settings, like
 > private dns addresses, creating a derp node, etc.
 > edit the config files accordingly.
+>
+> If you need more options for the proxy, node balancing,
+> rate limiting, etc. I suggest using Nginx or Traefik.
+> A Traefik version is available [here](http://null).
 
 Caddy automatically creates a proxy,
 gets a valid SSL certificate from Letsencrypt
