@@ -47,6 +47,8 @@ Visit ```<SERVER_URL>/admin``` and enter the api key. Now you have access to hea
 
 ### Tailscale client
 
+I suggest creating user pre-auth keys for a smoother and faster client connection.
+
 #### Rpi Dns fix
 
 One of the links / symlinks works, haven't tested which one.
@@ -71,6 +73,9 @@ sudo systemctl restart tailscaled
 
 The advertise routes and exit node are optional,
 you can accept or deny in admin page anyway.
+
+Replace the placeholder strings accordingly.
+
 
 ```
 sudo tailscale up /
