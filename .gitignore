@@ -1,0 +1,9 @@
+data/caddy/*
+!data/caddy/.gitkeep
+
+data/headscale/*
+!data/headscale/.gitkeep
+
+config/headscale/config.yaml
+config/caddy/Caddyfile
+
