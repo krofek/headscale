@@ -1,9 +1,14 @@
 ## Headscale + Headscale-Admin + Caddy Proxy
 
-Working setup for Headscale with SSL through a proxy.
+> [!NOTE]
+> This is a minimal pre-configured setup.
+> If you need some advanced settings, like
+> private dns addresses, creating a derp node, etc.
+> edit the config files accordingly.
+
 Caddy automatically creates a proxy,
-gets a valid TLS certificate from Letsencrypt
-and redirects http calls to SSL encrypted https.
+gets a valid SSL certificate from Letsencrypt
+and redirects http (```:80```) calls to https (```:443```).
 
 
 ### Setup
@@ -47,7 +52,9 @@ docker exec -it headscale headscale apikey create
 Copy and save the api key somewhere safe, you can't access the same api key later. 
 You can still create new and delete the old ones in case you lose it.
 
-Visit ```https://<SERVER_URL>/admin``` and enter the api key. Now you have access to headscale through the admin web dashboard.
+Visit ```https://<SERVER_URL>/admin``` and enter the 
+api key. Now you have access to headscale on the 
+admin web dashboard.
 
 
 ### Tailscale client
