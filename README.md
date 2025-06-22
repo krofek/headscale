@@ -5,12 +5,14 @@ Caddy automatically creates a proxy,
 gets a valid TLS certificate from Letsencrypt
 and redirects http calls to SSL encrypted https.
 
+
 ### Setup
 
 ```sh
 git clone https://github.com/Krofek/headscale
 cd headscale
 ```
+
 
 #### Copy and Edit Configs
 
@@ -28,11 +30,13 @@ cp config/caddy/Caddyfile.example config/caddy/Caddyfile
 nano config/caddy/Caddyfile
 ```
 
+
 #### Start docker and check logs
 
 ```sh
 docker compose up -d && docker compose logs -f
 ```
+
 
 #### Create Api Key
 
@@ -45,9 +49,11 @@ You can still create new and delete the old ones in case you lose it.
 
 Visit ```https://<SERVER_URL>/admin``` and enter the api key. Now you have access to headscale through the admin web dashboard.
 
+
 ### Tailscale client
 
 I suggest creating user pre-auth keys for a smoother and faster client connection.
+
 
 #### Rpi Dns fix
 
@@ -69,9 +75,8 @@ sudo systemctl restart NetworkManage
 sudo systemctl restart tailscaled
 ```
 
-#### Node connection example
 
-you can accept or deny in admin page anyway.
+#### Node connection example
 
 Replace the placeholder strings accordingly.
 
@@ -88,6 +93,7 @@ sudo tailscale up /
 ```
 
 The advertise routes and exit node oprions are optional,
+you can accept or deny in admin page anyway.
 
 
 ## Important
@@ -96,4 +102,3 @@ At the moment headscale-admin doesn't fully support Headscale v0.26.
 Mostly the problems arise while setting up ACL in the dashboard. Since Headscale v0.26 needa user names to include a @ in the ACL config.
 
 I suggest using the ACL setup normally but instead of saving the config normally, go to the Config tab and add @ at the end of user names directly in the config text editor and then save.
-
