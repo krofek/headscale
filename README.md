@@ -87,3 +87,11 @@ sudo tailscale up /
 --advertise-exit-node  /
 --auth-key=<PREAUTH_KEY>
 ```
+
+## Important
+
+At the moment headscale-admin doesn't fully support Headscale v0.26.
+Mostly the problems arise while setting up ACL in the dashboard. Since Headscale v0.26 needa user names to include a @ in the ACL config.
+
+I suggest using the ACL setup normally but instead of saving the config normally, go to the Config tab and add @ at the end of user names directly in the config text editor and then save.
+
