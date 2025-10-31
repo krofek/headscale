@@ -23,7 +23,7 @@ services:
       TZ: Europe/Ljubljana
 
   headscale-admin:
-    image: goodieshq/headscale-admin:dev
+    image: ghcr.io/krofek/headscale-admin:main
     container_name: headscale-admin
     restart: unless-stopped
     environment:
