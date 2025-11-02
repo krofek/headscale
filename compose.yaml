@@ -21,11 +21,18 @@ services:
       - ./config/headscale:/etc/headscale
     environment:
       TZ: Europe/Ljubljana
-
-  headscale-admin:
-    image: ghcr.io/krofek/headscale-admin:main
-    container_name: headscale-admin
+  
+  headboard:
+    image: ghcr.io/krofek/headboard:main
+    container_name: headboard
     restart: unless-stopped
     environment:
       TZ: Europe/Ljubljana
+
+  # headscale-admin:
+  #   image: ghcr.io/krofek/headscale-admin:main
+  #   container_name: headscale-admin
+  #   restart: unless-stopped
+  #   environment:
+  #     TZ: Europe/Ljubljana
 

@@ -1,4 +1,4 @@
-# Change <S9ERVER_URL> to your server url
+# Change <SERVER_URL> to your server url
 server_url: https://<SERVER_URL>
 
 listen_addr: 0.0.0.0:8080

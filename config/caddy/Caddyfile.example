@@ -1,6 +1,7 @@
 # Change <SERVER_URL> to your server url
 https://<SERVER_URL> {
-	reverse_proxy /admin* http://headscale-admin:80
+	# reverse_proxy /admin* http://headscale-admin:80
+	reverse_proxy /admin* http://headboard:3000
 
 	reverse_proxy * headscale:8080
 }
